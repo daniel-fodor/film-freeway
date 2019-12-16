@@ -1,0 +1,41 @@
+.gallery {
+    padding-top: 40px;
+
+    h2 {
+        @include font-lato;
+        font-size: 1.67rem;
+        font-weight: 900;
+        color: #{$bluev5};
+        margin-bottom: 40px;
+
+        @media (max-width: 1400px) {
+            font-size: 1.45rem;
+        }
+
+        @media (max-width: 600px) {
+            margin-bottom: 20px;
+        }
+    }
+
+    .row {
+        margin-left: -20px;
+        margin-right: -20px;
+    }
+
+    .col {
+        padding: 0 20px;
+    }
+
+    .gallery-item {
+        margin-bottom: 40px;
+
+        img {
+            width: 100%;
+        }
+
+        @media (max-width: 600px) {
+            margin-bottom: 20px;
+        }
+
+    }
+}

@@ -1,0 +1,353 @@
+.sidebar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 370px;
+    margin-left: 50px;
+
+    @media (max-width: 1400px) {
+        width: 320px;
+        margin-left: 25px;
+    }
+
+    @media (max-width: 1200px) {
+        width: 100%;
+        flex-wrap: wrap;
+        flex-direction: row;
+        flex: 1 0 100%;
+        margin: 40px 0 0 0;
+    }
+
+    >div:last-of-type {
+        margin-bottom: 0;
+    }
+
+    /* sidebar: general style for boxes */
+    .sidebar-item {
+        box-shadow: 0 0 50px rgba(#343434, .1);
+        margin-bottom: 55px;
+
+        @media (max-width: 1400px) {
+            margin-bottom: 50px;
+        }
+
+        @media (max-width: 800px) {
+            margin-bottom: 40px;
+        }
+    }
+
+    /*  sidebar: banner */
+    .banner {
+        position: relative;
+        height: 773px;
+        width: 100%;
+        overflow: hidden;
+        border-radius: 6px;
+        margin-bottom: 60px;
+
+        .badge {
+            @include font-lato;
+            font-size: 12px;
+            text-transform: uppercase;
+            position: absolute;
+            background: #{$bluev3};
+            border-radius: 3px;
+            color: #{$white};
+            width: 50px;
+            height: 30px;
+            top: 10px;
+            left: 10px;
+        }
+
+        @media (max-width: 1200px) {
+            width: 100%;
+            flex: 1 0 100%;
+            height: 300px;
+            margin-bottom: 50px;
+
+            img {
+                object-fit: cover;
+                width: 100%;
+            }
+        }
+
+        @media (max-width: 600px) {
+            margin-bottom: 40px;
+        }
+    }
+
+    /*  sidebar: question and links(request pacakge, submit your package) box */
+    .package-actions {
+        @include font-lato;
+        border-radius: 6px;
+        background: #{$white};
+
+        h3 {
+            padding: 30px 30px;
+            font-weight: 700;
+            font-size: 1.45rem;
+            line-height: 1.45;
+        }
+
+        ul {
+            li {
+                padding: 40px 30px;
+                border-top: 3px solid #{$light-gray};
+            }
+
+            a {
+                display: block;
+                @include font-lato;
+                color: #{$black};
+                font-weight: 700;
+                font-size: 1.45rem;
+            }
+        }
+
+        @media (max-width: 1400px) {
+            h3 {
+                padding: 25px 35px;
+                font-size: 1.2rem;
+            }
+
+            ul {
+                li {
+                    padding: 30px 30px;
+                    a {
+                        font-size: 1.2rem;
+                    }
+                }
+            }
+        }
+
+        @media (max-width: 1200px) {
+            flex: 1 0 100%;
+        }
+
+        @media (max-width: 800px) {
+            h3 {
+                padding: 20px 25px;
+            }
+
+            ul {
+                li {
+                    padding: 20px 25px;
+                }
+            }
+        }
+    }
+
+    /* sidebar: recent news box */
+    .recent-news {
+        background: #{$white};
+        border-radius: 6px;
+
+        .recent-news-header {
+            background: #{$bluev2};
+            color: #{$white};
+            height: 70px;
+            display: flex;
+            align-items: center;
+            padding: 0 30px;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+
+            h3 {
+                font-size: 1.34rem;
+                font-weight: 900;
+                line-height: 1;
+            }
+        }
+
+        ul {
+            li {
+                padding: 35px 30px;
+                border-bottom: 3px solid #{$light-gray};
+
+                &:first-child {
+                    padding: 30px 30px;
+                }
+            }
+
+            a {
+                @include font-lato;
+                display: block;
+                font-size: 1.1rem;
+                color: #{$black};
+                line-height: 1.7;
+
+                &:hover {
+                    color: #{$bluev2};
+                }
+            }
+        }
+
+        .more-link {
+            display: block;
+            padding: 28px 30px;
+            font-weight: 900;
+            font-size: 1.33rem;
+        }
+
+        @media (max-width: 1400px) {
+            .recent-news-header {
+                h3 {
+                    font-size: 1.1rem;
+                }
+            }
+
+            ul {
+                li {
+                    padding: 25px 30px;
+                    a {
+                        font-size: 1rem;
+                    }
+                }
+            }
+
+            .more-link {
+                padding: 20px 30px;
+                font-size: 1.1rem;
+            }
+        }
+
+        @media (max-width: 1200px) {
+            flex: 1 0 100%;
+        }
+
+        @media (max-width: 800px) {
+            ul {
+                li {
+                    border-bottom: 2px solid #{$light-gray};
+                    padding: 25px 20px;
+
+                    &:first-child {
+                        padding: 20px 20px;
+                    }
+                }
+            }
+
+            .more-link {
+                padding: 15px 20px;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .recent-news-header {
+                height: 55px;
+            }
+        }
+    }
+
+    /* sidebar: order packages box */
+    .order-box {
+        background: #{$white};
+        border-radius: 6px;
+
+        /* tags and text */
+        .order-box-content {
+            padding: 30px 26px;
+
+            p {
+                font-size: 1rem;
+            }
+        }
+
+        .tags {
+            margin-bottom: 20px;
+
+            ul {
+                li {
+                    margin-right: 9px;
+                }
+            }
+        }
+
+        /* price, button and payments */
+        .order-box-bottom {
+            .item-buy {
+                height: 60px;
+                display: flex;
+
+                >div {
+                    border-top: 3px solid #{$light-gray};
+                    border-bottom: 3px solid #{$light-gray};
+                    flex: 1 0 50%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    font-size: 1.1rem;
+                    @include font-proxima-nova-bold;
+                }
+
+                .buy-btn {
+                    background: #{$orange};
+                    color: #{$white};
+                    font-size: 1rem;
+                    flex: 1 0 50%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+            }
+
+            .item-support-payment {
+                padding: 30px;
+                ul {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+
+                    li {
+                        margin: 0 10px;
+
+                        img {
+                            width: auto;
+                            height: 22px;
+                            max-width: 100%;
+                        }
+
+                        &:nth-child(1) {
+                            img {
+                                width: 52px;
+                                height: 16px;
+                            }
+                        }
+
+                        &:nth-child(3) {
+                            img {
+                                height: 19px;
+                            }
+                        }
+
+                        &:nth-child(4) {
+                            img {
+                                height: 18px;
+                            }
+                        }
+                    }
+                }
+
+                @media (max-width: 1400px) {
+                    padding: 25px 20px;
+                }
+
+                @media (max-width: 600px) {
+                    ul {
+                        flex-wrap: wrap;
+
+                        li {
+                            margin-bottom: 15px;
+                        }
+                    }
+                }
+            }
+        }
+
+        @media (max-width: 1200px) {
+            flex: 1 0 100%;
+        }
+    }
+}

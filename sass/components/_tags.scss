@@ -1,0 +1,33 @@
+.tags {
+    ul {
+        display: flex;
+        flex-wrap: wrap;
+
+        li {
+            margin-right: 13px;
+            margin-bottom: 13px;
+
+            a {
+                display: block;
+                background: #{$bluev4};
+                border-radius: 25px;
+                color: #{$white};
+                font-size: 0.95rem;
+                padding: 0.45em 0.95em;
+            }
+        }
+    }
+}
+
+.tag {
+    display: inline-block;
+    background: #{$bluev4};
+    border-radius: 25px;
+    color: #{$white};
+    font-size: 0.95rem;
+    padding: 0.45em 0.95em;
+
+    &:hover {
+        background: #{$bluev3};
+    }
+}

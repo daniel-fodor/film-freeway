@@ -1,0 +1,50 @@
+/* reused wrapper or container style */
+.page-wrapper {
+    overflow-x: hidden;
+}
+
+main {
+    display: flex;
+    padding: 60px 80px 100px 80px;
+
+    @media (max-width: 1600px) {
+        padding: 50px 45px 60px 45px;
+    }
+
+    @media (max-width: 1400px) {
+        padding: 35px 25px 45px 25px;
+    }
+
+    @media (max-width: 1200px) {
+        flex-wrap: wrap;
+    }
+
+    @media (max-width: 600px) {
+        padding: 30px 15px 40px 15px;
+    }
+}
+
+.content {
+    &--fullwidth {
+        width: 100%;
+    }
+
+    @media (max-width: 1200px) {
+        width: 100%;
+        flex: 1 0 100%;
+    }
+}
+
+.inner-content {
+    padding: 50px;
+
+    @media (max-width: 1200px) {
+        padding: 30px;
+    }
+
+
+    @media (max-width: 600px) {
+        padding: 20px;
+    }
+}
+
